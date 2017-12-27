@@ -1,0 +1,10 @@
+-XX:+UseG1GC -XX:InitiatingHeapOccupancyPercent=70 -XX:+PrintFlagsFinal -XX:+PrintReferenceGC 
+-XX:+UnlockExperimentalVMOptions -XX:-ResizePLAB -XX:G1NewSizePercent=3 -XX:MaxGCPauseMillis=200 
+-XX:+UnlockDiagnosticVMOptions  -XX:+G1SummarizeConcMark -XX:+ParallelRefProcEnabled -XX:+PrintGCDetails -XX:+PrintAdaptiveSizePolicy   -XX:G1HeapRegionSize=32M -XX:G1HeapWastePercent=20 -XX:ConcGCThreads=20  
+-XX:ParallelGCThreads=20 
+-verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps  -XX:+PrintGCApplicationStoppedTime  
+-XX:+PrintTenuringDistribution -Xloggc:./region-server-gc.log 
+-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=1 -XX:GCLogFileSize=512M 
+-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false 
+-Dcom.sun.management.jmxremote.authenticate=false 
+-Dcom.sun.management.jmxremote.port=22222 
